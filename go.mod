@@ -1,6 +1,6 @@
 module gotstarter
 
-go 1.22.2
+go 1.23.8
 
 require (
 	github.com/projectdiscovery/goflags v0.1.74

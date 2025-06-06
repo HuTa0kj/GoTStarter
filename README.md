@@ -1,7 +1,7 @@
 # GoTStarter
 GoTStarter is a scaffold for quickly building terminal tools. It is equipped with basic functions such as command line parameter parsing, log output, configuration file loading, and code file compilation.
 
-The project is based on Go 1.22
+The project is based on Go 1.23
 
 ```bash
 git clone git@github.com:HuTa0kj/GoTStarter.git
@@ -46,12 +46,14 @@ The same effect as you can see.
   / ____/___/_  __/ ___// /_____ ______/ /____  _____
  / / __/ __ \/ /  \__ \/ __/ __ */ ___/ __/ _ \/ ___/
 / /_/ / /_/ / /  ___/ / /_/ /_/ / /  / /_/  __/ /
-\____/\____/_/  /____/\__/\__,_/_/   \__/\___/_/     0.0.1
+\____/\____/_/  /____/\__/\__,_/_/   \__/\___/_/     0.0.2
 
-[INF] Debug mode enabled
-[INF] Read Config Successful
-[DBG] Initialization completed
-[INF] input-test
+[INF] [2025-06-06T18:18:48+08:00] Debug mode enabled
+[INF] [2025-06-06T18:18:48+08:00] Read Config Successful
+[DBG] [2025-06-06T18:18:48+08:00] Initialization completed
+[INF] [2025-06-06T18:18:48+08:00] input-test
+[INF] [2025-06-06T18:18:48+08:00] Task Completed
+
 ```
 
 You can generate your favorite banner icon, tool name, and more.
