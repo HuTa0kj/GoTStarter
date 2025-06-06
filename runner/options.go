@@ -43,6 +43,8 @@ func ParseOptions() (*Options, error) {
 	if options.Debug {
 		gologger.DefaultLogger.SetMaxLevel(levels.LevelDebug)
 	}
+	// display timestamp
+	gologger.DefaultLogger.SetTimestamp(true, levels.LevelFatal)
 
 	// Validate options
 	err := options.validateOptions()
