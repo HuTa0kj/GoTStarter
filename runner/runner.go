@@ -2,8 +2,6 @@ package runner
 
 import (
 	"github.com/projectdiscovery/gologger"
-
-	"gotstarter/internal/initialize"
 )
 
 type Runner struct {
@@ -13,10 +11,6 @@ type Runner struct {
 func New(options *Options) (*Runner, error) {
 	runner := &Runner{
 		Options: options,
-	}
-	err := initialize.Init()
-	if err != nil {
-		return nil, err
 	}
 	return runner, nil
 }

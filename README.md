@@ -22,6 +22,18 @@ Origin Module Name（Such as gotstarter）: gotstarter
 New Module Name（Such as myproject）: <Your Module Name>
 ```
 
+Configure environment variables in `.env`.
+
+```
+cp .env.example .env
+```
+
+Get the value of a variable at any time.
+
+```go
+os.Getenv("TOOL_DESC")
+```
+
 You can test it by executing the command.
 
 ```bash

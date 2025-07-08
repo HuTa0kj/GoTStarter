@@ -1,12 +1,17 @@
 package main
 
 import (
+	"github.com/joho/godotenv"
 	"github.com/projectdiscovery/gologger"
-
+	
 	"gotstarter/runner"
 )
 
 func main() {
+	err := godotenv.Load()
+	if err != nil {
+		gologger.Error().Msg("Error loading .env file")
+	}
 	options, err := runner.ParseOptions()
 	if err != nil {
 		gologger.Error().Msg(err.Error())

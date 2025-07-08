@@ -2,6 +2,7 @@ package runner
 
 import (
 	"fmt"
+	"os"
 
 	"github.com/projectdiscovery/goflags"
 	"github.com/projectdiscovery/gologger"
@@ -18,7 +19,7 @@ type Options struct {
 func ParseOptions() (*Options, error) {
 	options := &Options{}
 	flagSet := goflags.NewFlagSet()
-	flagSet.SetDescription(`GoTStarter is a scaffold for quickly building terminal tools`)
+	flagSet.SetDescription(os.Getenv("TOOL_DESC"))
 
 	flagSet.CreateGroup("input", "Input",
 		flagSet.StringVarP(&options.Input, "input", "i", "", ""),
