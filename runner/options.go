@@ -2,7 +2,6 @@ package runner
 
 import (
 	"fmt"
-	"os"
 
 	"github.com/projectdiscovery/goflags"
 	"github.com/projectdiscovery/gologger"
@@ -19,7 +18,7 @@ type Options struct {
 func ParseOptions() (*Options, error) {
 	options := &Options{}
 	flagSet := goflags.NewFlagSet()
-	flagSet.SetDescription(os.Getenv("TOOL_DESC"))
+	flagSet.SetDescription(ToolDesc)
 
 	flagSet.CreateGroup("input", "Input",
 		flagSet.StringVarP(&options.Input, "input", "i", "", ""),
@@ -45,7 +44,7 @@ func ParseOptions() (*Options, error) {
 		gologger.DefaultLogger.SetMaxLevel(levels.LevelDebug)
 	}
 	// display timestamp
-	gologger.DefaultLogger.SetTimestamp(true, levels.LevelFatal)
+	gologger.DefaultLogger.SetTimestampWithFormat(true, levels.LevelFatal, "2006-01-02 15:04:05")
 
 	// Validate options
 	err := options.validateOptions()
